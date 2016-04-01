@@ -18,14 +18,14 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     private List<Photo> data = Collections.emptyList();
     private LayoutInflater inflater;
     private int screenWidth;        // for getting image  size
-    private int activityMargin;     // for getting image size
+    private int activityMargin;     // for getting image  size
     private int imageRightMargin;   // for getting image  size
 
     public MyRecyclerViewAdapter(Context context, List<Photo> data) {
         inflater = LayoutInflater.from(context);
         this.data = data;
-        screenWidth = context.getResources().getDisplayMetrics().widthPixels;                       // for getting image size
-        activityMargin = (int) context.getResources().getDimension(R.dimen.activity_margin);        // for getting image size
+        screenWidth = context.getResources().getDisplayMetrics().widthPixels;                       // for getting image  size
+        activityMargin = (int) context.getResources().getDimension(R.dimen.activity_margin);        // for getting image  size
         imageRightMargin = (int) context.getResources().getDimension(R.dimen.image_right_margin);   // for getting image size
     }
 
@@ -39,7 +39,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     @Override
     public void onBindViewHolder(MyViewHolder myViewHolder, int i) {
 
-        //find image side size
+        //find image side size for Picasso
         int imageSideSize = (screenWidth - 2*activityMargin - imageRightMargin)/2;
 
         Photo current = data.get(i);
